@@ -43,8 +43,8 @@ namespace
 {
     // clang-format off
     namespace fs                 = irods::experimental::filesystem;
+    namespace log                = irods::experimental::log;
 
-    using log                    = irods::experimental::log;
     using size_type              = irods::handler::size_type;
     using quotas_info_type       = std::unordered_map<std::string, size_type>;
     using file_position_map_type = std::unordered_map<std::string, irods::handler::file_position_type>;
