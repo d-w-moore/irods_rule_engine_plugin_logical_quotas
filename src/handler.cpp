@@ -346,7 +346,7 @@ namespace
     template <typename Function>
     auto switch_user(ruleExecInfo_t& _rei, std::string_view _username, Function _func) -> void
     {
-        irods::experimental::scoped_client_identity sci{*_rei.rsComm, _username};
+        irods::experimental::scoped_client_identity sci{*_rei.rsComm, std::string{_username}};
         _func();
     }
 
